@@ -30,7 +30,7 @@
 
 		<form class="mt-4" on:submit|preventDefault={handleLogin}>
 			<div class="grid grid-cols-1">
-				<label for="email" class="text-lg font-medium pb-2 text-[#111827]">Email:</label>
+				<label for="email" class="text-lg font-medium pb-2 text-[#111827]">Email</label>
 				<div class="relative flex items-center">
 					<input
 						class="bg-white p-3 pl-10 border border-[#D1D5DB] rounded-lg w-full"
