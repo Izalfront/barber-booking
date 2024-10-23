@@ -1,4 +1,5 @@
 <script>
+	import Index from './Onboarding/index.svelte';
 </script>
 
 <svelte:head>
@@ -6,4 +7,6 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section></section>
+<div class="bg-gray-500">
+	<Index />
+</div>
