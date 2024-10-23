@@ -77,8 +77,10 @@
 
 <div class="w-full max-w-[500px] mx-auto text-base overflow-x-hidden h-screen">
 	<BarberScreenLoading {loading} />
-	<main class="h-screen bg-gray-200 overflow-y-hidden">
-		<img src={slides[currentSlide].image} alt="" class="z-10" />
+	<main class="h-screen overflow-y-hidden">
+		<div class="bg-gray-200">
+			<img src={slides[currentSlide].image} alt="" class="z-10" />
+		</div>
 		<div class="w-full bg-[#F99417] z-20 pt-6 rounded-t-3xl -translate-y-14 h-full">
 			<div class="text-start mx-4">
 				<h2 class="text-white font-semibold text-2xl">{slides[currentSlide].title}</h2>
@@ -87,7 +89,7 @@
 				</p>
 			</div>
 			<br />
-			<div class="text-center">
+			<div class="text-center mt-4">
 				<button class="bg-[#363062] px-6 py-2 text-white" onclick={nextSlide}>
 					{#if currentSlide < slides.length - 1}
 						Next
@@ -97,7 +99,7 @@
 				</button>
 				<button onclick={undoSlide} class="bg-[#363062] px-6 py-2 text-white">Undo</button>
 			</div>
-			<div class="text-center mt-2">
+			<div class="text-center mt-4">
 				<button onclick={getStarted} class="bg-[#363062] py-3 text-white w-[40vh] rounded-lg"
 					>Get Started</button
 				>
