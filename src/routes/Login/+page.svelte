@@ -15,6 +15,10 @@
 	function goToForgotPassword() {
 		window.location.href = '/forgot-password';
 	}
+
+	function goToHome() {
+		window.location.href = '/Home';
+	}
 </script>
 
 <main class="w-full max-w-[500px] mx-auto text-base overflow-x-hidden h-screen">
@@ -92,7 +96,8 @@
 			<div class="text-center">
 				<button
 					type="submit"
-					class="bg-[#363062] py-3 text-white w-[41vh] font-medium rounded-lg mt-6">Login</button
+					class="bg-[#363062] py-3 text-white w-[41vh] font-medium rounded-lg mt-6"
+					on:click={goToHome}>Login</button
 				>
 			</div>
 		</form>
