@@ -20,13 +20,45 @@
 			pinned: 'Banguntapan (5 km)',
 			rating: '4.5',
 			img: barber3
+		},
+		{
+			title: 'Alana Barbershop - Haircut massage & Spa',
+			pinned: 'Banguntapan (5 km)',
+			rating: '4.5',
+			img: barber
+		},
+		{
+			title: `Hercha Barbershop - Haircut & Styling`,
+			pinned: 'Jalan Kaliurang (8 km)',
+			rating: '4.5',
+			img: barber2
+		},
+		{
+			title: 'Alana Barbershop - Haircut massage & Spa',
+			pinned: 'Banguntapan (5 km)',
+			rating: '4.5',
+			img: barber3
 		}
 	];
+
+	let displayCount = 3; // Initial number of items to display
+
+	function getDisplayedItems() {
+		return listBarber.filter((_, index) => index < displayCount);
+	}
+
+	function handleShowAll() {
+		displayCount = listBarber.length;
+	}
+
+	function shouldShowButton() {
+		return displayCount < listBarber.length;
+	}
 </script>
 
 <div class="mt-4">
 	<h1 class="text-xl font-[600]">Nearest Babershop</h1>
-	{#each listBarber as list}
+	{#each getDisplayedItems() as list}
 		<div class="flex items-start mt-4">
 			<img class="w-auto h-28 mr-2" src={list.img} alt="" />
 			<div>
@@ -69,30 +101,34 @@
 			</div>
 		</div>
 	{/each}
-	<div class="flex items-center justify-center my-6">
-		<button class="flex items-center py-2 px-4 border border-black text-black rounded-lg"
-			>See All
-			<svg
-				class="ml-2"
-				width="25"
-				height="24"
-				viewBox="0 0 25 24"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path
-					d="M9.5 15L15.5 9M15.5 9H11M15.5 9V13.5"
-					stroke="#363062"
-					stroke-width="1.5"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-				/>
-				<path
-					d="M2.5 12C2.5 7.28595 2.5 4.92893 3.96447 3.46447C5.42893 2 7.78595 2 12.5 2C17.214 2 19.5711 2 21.0355 3.46447C22.5 4.92893 22.5 7.28595 22.5 12C22.5 16.714 22.5 19.0711 21.0355 20.5355C19.5711 22 17.214 22 12.5 22C7.78595 22 5.42893 22 3.96447 20.5355C2.5 19.0711 2.5 16.714 2.5 12Z"
-					stroke="#363062"
-					stroke-width="1.5"
-				/>
-			</svg>
-		</button>
-	</div>
+	{#if shouldShowButton()}
+		<div class="flex items-center justify-center my-6">
+			<button
+				on:click={handleShowAll}
+				class="flex items-center py-2 px-4 border border-black text-black rounded-lg"
+				>See All
+				<svg
+					class="ml-2"
+					width="25"
+					height="24"
+					viewBox="0 0 25 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M9.5 15L15.5 9M15.5 9H11M15.5 9V13.5"
+						stroke="#363062"
+						stroke-width="1.5"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+					<path
+						d="M2.5 12C2.5 7.28595 2.5 4.92893 3.96447 3.46447C5.42893 2 7.78595 2 12.5 2C17.214 2 19.5711 2 21.0355 3.46447C22.5 4.92893 22.5 7.28595 22.5 12C22.5 16.714 22.5 19.0711 21.0355 20.5355C19.5711 22 17.214 22 12.5 22C7.78595 22 5.42893 22 3.96447 20.5355C2.5 19.0711 2.5 16.714 2.5 12Z"
+						stroke="#363062"
+						stroke-width="1.5"
+					/>
+				</svg>
+			</button>
+		</div>
+	{/if}
 </div>
