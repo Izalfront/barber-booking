@@ -1,5 +1,6 @@
 <script lang="ts">
 	import BarberScreenLoading from '$lib/images/components/BarberScreenLoading.svelte';
+	import StepIndicator from './Home/child/StepIndicator.svelte';
 
 	import onboard1 from './Onboarding/img/onboard1.png';
 	import onboard2 from './Onboarding/img/onboard2.png';
@@ -29,27 +30,12 @@
 		}
 	];
 
-	function nextSlide() {
-		if (currentSlide < slides.length - 1) {
-			currentSlide++;
-		} else {
-			window.location.href = '/Login';
-		}
-	}
-
 	function getStarted() {
 		window.location.href = '/Login';
 	}
 
-	function undoSlide() {
-		if (currentSlide > 0) {
-			currentSlide--;
-		}
-	}
-
 	let loading = true;
 
-	// Simulasi loading
 	import { onMount } from 'svelte';
 	function appOnLoad() {
 		setTimeout(() => {
@@ -68,6 +54,12 @@
 			};
 		}
 	});
+
+	function handleStepChange(step: number) {
+		currentSlide = step - 1;
+	}
+
+	$: currentStep = currentSlide + 1;
 </script>
 
 <svelte:head>
@@ -89,15 +81,8 @@
 				</p>
 			</div>
 			<br />
-			<div class="text-center mt-4">
-				<button class="bg-[#363062] px-6 py-2 text-white" onclick={nextSlide}>
-					{#if currentSlide < slides.length - 1}
-						Next
-					{:else}
-						Go to Login
-					{/if}
-				</button>
-				<button onclick={undoSlide} class="bg-[#363062] px-6 py-2 text-white">Undo</button>
+			<div class="flex items-center justify-center text-center mt-4">
+				<StepIndicator totalSteps={slides.length} {currentStep} onStepClick={handleStepChange} />
 			</div>
 			<div class="text-center mt-4">
 				<button onclick={getStarted} class="bg-[#363062] py-3 text-white w-[40vh] rounded-lg"
