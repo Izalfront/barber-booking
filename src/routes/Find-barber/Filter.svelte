@@ -26,7 +26,9 @@
 
 {#if isFilter}
 	<div class="w-full max-w-[500px] mx-auto text-base overflow-x-hidden h-screen">
-		<div class="bg-black/20 h-full w-full -z-10 p-12 bottom-[90%] absolute"></div>
+		<div
+			class="bg-black/20 -z-10 p-12 bottom-[90%] absolute w-full max-w-[500px] mx-auto overflow-x-hidden h-screen"
+		></div>
 		<div class="bg-white shadow-lg w-full border rounded-t-3xl h-full">
 			<div class="flex justify-between items-center py-6 px-8 bg-[#F9FAFB] rounded-t-3xl">
 				<div class="flex gap-x-6 items-center">
