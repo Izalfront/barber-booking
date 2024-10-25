@@ -48,7 +48,18 @@
 				class="absolute top-44 left-4 bg-[#363062] hover:bg-[#2a234e] px-4 py-3 rounded-xl text-white z-20 font-semibold"
 				>Booking Now</button
 			>
-			<img class="absolute left-[12.3rem] w-auto h-[19rem] z-30" src={people} alt="" />
+			<div class="relative w-full">
+				<img
+					class="absolute
+						 left-[calc(82%-8rem)] sm:left-[calc(82%-6rem)] md:left-[calc(88%-9rem)]
+						 h-[clamp(15rem,45vh,19rem)]
+						 w-auto
+						 transition-all duration-300
+						 z-30"
+					src={people}
+					alt=""
+				/>
+			</div>
 		</div>
 		<!-- search -->
 		<div class="mx-auto">

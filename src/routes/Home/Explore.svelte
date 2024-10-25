@@ -11,8 +11,8 @@
 	}
 </script>
 
-<div class="flex items-center mt-7 justify-between">
-	<div class="relative">
+<div class="flex items-center mt-3 justify-between w-full max-w-[90rem] mx-auto">
+	<div class="relative flex-1 max-w-3xl">
 		<!-- Icon Search -->
 		<img
 			class="absolute pt-4 w-9 pl-3 transition-opacity duration-200"
@@ -23,10 +23,10 @@
 
 		<!-- Input Field -->
 		<input
-			class="bg-[#EBF0F5] p-4 sm:w-[24rem] w-[19.4rem] rounded-lg"
+			class="bg-[#EBF0F5] p-4 w-full sm:max-w-md md:max-w-lg lg:max-w-xl rounded-lg"
 			type="text"
 			class:pl-12={!isFocused}
-			placeholder="Search barber’s, haircut service..."
+			placeholder="Search barber's, haircut service..."
 			on:focus={() => (isFocused = true)}
 			on:blur={() => (isFocused = false)}
 		/>
