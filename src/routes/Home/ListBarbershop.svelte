@@ -41,19 +41,21 @@
 		}
 	];
 
-	let displayCount = 3; // Initial number of items to display
-
 	function getDisplayedItems() {
 		return listBarber.filter((_, index) => index < displayCount);
 	}
 
+	$: displayCount = 3;
+
+	$: displayedItems = listBarber.slice(0, displayCount);
+
 	function handleShowAll() {
 		displayCount = listBarber.length;
+
+		displayedItems = [...listBarber];
 	}
 
-	function shouldShowButton() {
-		return displayCount < listBarber.length;
-	}
+	$: showButton = displayCount < listBarber.length;
 </script>
 
 <div class="mt-4">
@@ -101,7 +103,7 @@
 			</div>
 		</div>
 	{/each}
-	{#if shouldShowButton()}
+	{#if showButton}
 		<div class="flex items-center justify-center my-6">
 			<button
 				on:click={handleShowAll}

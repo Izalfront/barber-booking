@@ -2,7 +2,8 @@
 	import StepIndicator from './child/StepIndicator.svelte';
 	import barber from './img/master.png';
 	import ListRecomended from './ListRecomended.svelte';
-
+	import FindMap from './maps/FindMap.svelte';
+	import calendar from './img/calendar.svg';
 	let currentStep = 1;
 
 	function handleStepChange(step: number) {
@@ -13,9 +14,19 @@
 <div class="pt-6">
 	<h1 class="text-xl font-semibold mb-2">Most recommended</h1>
 	<div>
-		<div>
-			<img src={barber} alt="" />
+		<div class="relative overflow-hidden" style="width: 100%; height: 300px;">
+			<div class="absolute inset-0">
+				<img class="object-cover w-full h-full rounded-xl" src={barber} alt="BarberImage" />
+			</div>
+			<button
+				class="absolute top-[15rem] left-[12rem] bg-[#363062] hover:bg-[#2a234e] px-6 py-3 rounded-xl text-white font-semibold"
+				><div class="flex gap-x-1">
+					Booking Now
+					<img src={calendar} alt="Calendar Icon" />
+				</div>
+			</button>
 		</div>
+
 		<div class="block mt-4">
 			<h1 class="font-semibold text-lg leading-tight mb-2">
 				Master piece Barbershop - Haircut styling
@@ -55,8 +66,9 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex justify-end">
+	<div class="flex justify-end mt-3">
 		<StepIndicator totalSteps={5} {currentStep} onStepClick={handleStepChange} />
 	</div>
 	<ListRecomended />
+	<FindMap />
 </div>

@@ -6,6 +6,7 @@
 	import Explore from './Explore.svelte';
 	import ListBarbershop from './ListBarbershop.svelte';
 	import Recomended from './Recomended.svelte';
+	import BottomBar from '../BottomBar/BottomBar.svelte';
 </script>
 
 <div class="w-full max-w-[500px] mx-auto text-base overflow-x-hidden h-screen">
@@ -56,5 +57,8 @@
 		<!-- list barbershop -->
 		<ListBarbershop />
 		<Recomended />
+	</div>
+	<div class="sticky bottom-0">
+		<BottomBar />
 	</div>
 </div>
