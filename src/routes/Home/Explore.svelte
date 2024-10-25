@@ -1,8 +1,14 @@
 <script lang="ts">
+	import Filter from '../Find-barber/Filter.svelte';
 	import search from './img/explore.svg';
 	import filter from './img/filter.svg';
 
 	let isFocused = false;
+	let isFilter = false;
+
+	function PopUpFilter() {
+		isFilter = !isFilter;
+	}
 </script>
 
 <div class="flex items-center mt-7 justify-between">
@@ -26,6 +32,13 @@
 		/>
 	</div>
 	<div>
-		<img class="bg-[#363062] p-4 rounded-lg ml-2" src={filter} alt="" />
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+		<img on:click={PopUpFilter} class="bg-[#363062] p-4 rounded-lg ml-2" src={filter} alt="" />
+		{#if isFilter}
+			<div class="absolute top-72 right-0 z-50 w-full">
+				<Filter />
+			</div>
+		{/if}
 	</div>
 </div>
