@@ -30,7 +30,7 @@
 			class="bg-black/20 -z-10 p-12 bottom-[90%] absolute w-full max-w-[500px] mx-auto overflow-x-hidden h-screen"
 		></div>
 		<div class="bg-white shadow-lg w-full border rounded-t-3xl h-full">
-			<div class="flex justify-between items-center py-6 px-8 bg-[#F9FAFB] rounded-t-3xl">
+			<div class="flex justify-between items-center py-6 px-8 bg-[#EDEFFB] rounded-t-3xl">
 				<div class="flex gap-x-6 items-center">
 					<img class="bg-white rounded-xl p-4" src={question} alt="" />
 					<h1 class="text-2xl font-semibold text-black">Filter</h1>

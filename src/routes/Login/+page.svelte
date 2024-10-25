@@ -9,7 +9,7 @@
 	}
 
 	function goToRegister() {
-		window.location.href = '/Register';
+		window.location.href = '/register';
 	}
 
 	function goToForgotPassword() {
@@ -17,7 +17,7 @@
 	}
 
 	function goToHome() {
-		window.location.href = '/Home';
+		window.location.href = '/home';
 	}
 </script>
 

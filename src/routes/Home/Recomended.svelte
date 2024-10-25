@@ -9,6 +9,10 @@
 	function handleStepChange(step: number) {
 		currentStep = step;
 	}
+
+	function goToExplore() {
+		window.location.href = './explore';
+	}
 </script>
 
 <div class="pt-6">
@@ -19,6 +23,7 @@
 				<img class="object-cover w-full h-full rounded-xl" src={barber} alt="BarberImage" />
 			</div>
 			<button
+				on:click={goToExplore}
 				class="absolute top-[15rem] left-[12rem] bg-[#363062] hover:bg-[#2a234e] px-6 py-3 rounded-xl text-white font-semibold"
 				><div class="flex gap-x-1">
 					Booking Now
