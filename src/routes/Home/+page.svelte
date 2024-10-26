@@ -1,8 +1,8 @@
 <script lang="ts">
-	import pp from './img/pprofile.png';
-	import bg from '../Login/img/bg-login.svg';
-	import logo from './img/logo-gobar2.png';
-	import people from '../Onboarding/img/onboard3.png';
+	import pp from '../home/img/pprofile.png';
+	import bg from '../login/img/bg-login.svg';
+	import logo from '../home/img/logo-gobar2.png';
+	import people from '../login/img/onboard3.png';
 	import Explore from './Explore.svelte';
 	import ListBarbershop from './ListBarbershop.svelte';
 	import Recomended from './Recomended.svelte';

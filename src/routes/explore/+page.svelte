@@ -1,10 +1,9 @@
 <script lang="ts">
 	import barber from '../Home/img/master.png';
 	import calendar from '../Home/img/calendar.svg';
-	import StepIndicator from '../Home/child/StepIndicator.svelte';
-	import ListRecomended from '../Home/ListRecomended.svelte';
-	import FindMap from '../Home/maps/FindMap.svelte';
-	import Explore from '../Home/Explore.svelte';
+	import StepIndicator from '../home/child/StepIndicator.svelte';
+	import ListRecomended from '../home/ListRecomended.svelte';
+	import Explore from '../home/Explore.svelte';
 	import CategoryFilter from '../Find-barber/CategoryFilter.svelte';
 	let currentStep = 1;
 
@@ -15,11 +14,33 @@
 	function goToExplore() {
 		window.location.href = './explore';
 	}
+
+	function goToHome() {
+		window.location.href = './home';
+	}
 </script>
 
 <div class="w-full max-w-[500px] mx-auto text-base overflow-x-hidden h-screen">
 	<div class="pt-6 mx-6">
-		<h1 class="text-xl font-semibold mb-2">Most recommended</h1>
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+		<h1 on:click={goToHome} class="text-xl font-semibold mb-4 flex gap-x-4 items-center">
+			<svg
+				width="18"
+				height="14"
+				viewBox="0 0 18 14"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M17 7H1M1 7L7 1M1 7L7 13"
+					stroke="#111827"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>Explore Barbers
+		</h1>
 		<div>
 			<div class="relative overflow-hidden" style="width: 100%; height: 300px;">
 				<div class="absolute inset-0">

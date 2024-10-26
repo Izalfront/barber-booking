@@ -1,10 +1,10 @@
 <script lang="ts">
 	import BarberScreenLoading from '$lib/images/components/BarberScreenLoading.svelte';
-	import StepIndicator from './Home/child/StepIndicator.svelte';
+	import StepIndicator from './home/child/StepIndicator.svelte';
 
-	import onboard1 from './Onboarding/img/onboard1.png';
-	import onboard2 from './Onboarding/img/onboard2.png';
-	import onboard3 from './Onboarding/img/onboard3.png';
+	import onboard1 from './Login/img/onboard1.png';
+	import onboard2 from './Login/img/onboard2.png';
+	import onboard3 from './Login/img/onboard3.png';
 	// svelte-ignore non_reactive_update
 	let currentSlide = 0;
 	const slides = [
@@ -31,7 +31,7 @@
 	];
 
 	function getStarted() {
-		window.location.href = '/Login';
+		window.location.href = '/login';
 	}
 
 	let loading = true;

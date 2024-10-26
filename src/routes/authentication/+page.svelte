@@ -19,8 +19,7 @@
 	}
 
 	function goToAuthentication() {
-		// console.log(code.join(''));
-		window.location.href = '/Login';
+		window.location.href = '/login';
 	}
 </script>
 

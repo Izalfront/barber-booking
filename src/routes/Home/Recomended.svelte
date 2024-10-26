@@ -20,10 +20,16 @@
 	<div>
 		<div class="relative overflow-hidden" style="width: 100%; height: 300px;">
 			<div class="absolute inset-0">
-				<img class="object-cover w-full h-full rounded-xl" src={barber} alt="BarberImage" />
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+				<img
+					on:click={goToExplore}
+					class="object-cover w-full h-full rounded-xl"
+					src={barber}
+					alt="BarberImage"
+				/>
 			</div>
 			<button
-				on:click={goToExplore}
 				class="absolute top-[15rem] left-[12rem] bg-[#363062] hover:bg-[#2a234e] px-6 py-3 rounded-xl text-white font-semibold"
 				><div class="flex gap-x-1">
 					Booking Now
