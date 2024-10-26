@@ -56,12 +56,18 @@
 	}
 
 	$: showButton = displayCount < listBarber.length;
+
+	function goToBarberDetail() {
+		window.location.href = '/detail-barber';
+	}
 </script>
 
 <div class="mt-4">
 	<h1 class="text-xl font-[600]">Nearest Babershop</h1>
 	{#each getDisplayedItems() as list}
-		<div class="flex items-start mt-4">
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_static_element_interactions -->
+		<div on:click={goToBarberDetail} class="flex items-start mt-4">
 			<img class="w-auto h-28 mr-2" src={list.img} alt="" />
 			<div>
 				<h1 class="font-semibold text-lg leading-tight mb-2">
