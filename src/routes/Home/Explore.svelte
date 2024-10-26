@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Filter from '../Find-barber/Filter.svelte';
+	import Filter from '../find-barber/Filter.svelte';
 	import search from './img/explore.svg';
 	import filter from './img/filter.svg';
 

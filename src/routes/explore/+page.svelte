@@ -4,7 +4,8 @@
 	import StepIndicator from '../home/child/StepIndicator.svelte';
 	import ListRecomended from '../home/ListRecomended.svelte';
 	import Explore from '../home/Explore.svelte';
-	import CategoryFilter from '../Find-barber/CategoryFilter.svelte';
+	import CategoryFilter from '../find-barber/CategoryFilter.svelte';
+
 	let currentStep = 1;
 
 	function handleStepChange(step: number) {
