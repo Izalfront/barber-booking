@@ -15,14 +15,6 @@
 		{
 			id: 'treatment',
 			name: 'Treatment'
-		},
-		{
-			id: 'coloring',
-			name: 'Coloring'
-		},
-		{
-			id: 'treatment',
-			name: 'Treatment'
 		}
 	];
 

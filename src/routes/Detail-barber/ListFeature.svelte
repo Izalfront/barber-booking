@@ -3,6 +3,10 @@
 	import cut from './img/Scissors.svg';
 	import review from '../home/img/rating.svg';
 	import schedule from './img/schedule.svg';
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
 	let dataFeatures = [
 		{
 			id: 'about',
@@ -30,6 +34,7 @@
 
 	function handleClickFeat(tabName: string) {
 		activeFeature = tabName;
+		dispatch('change', activeFeature);
 	}
 </script>
 
@@ -39,7 +44,7 @@
 		<!-- svelte-ignore a11y_no_static_element_interactions -->
 		<div
 			on:click={() => handleClickFeat(data.id)}
-			class={`${activeFeature == data.id ? 'flex items-center gap-2 p-3 rounded-lg border-2 border-black min-w-[115px]' : 'flex items-center gap-2  p-3  min-w-[115px]'}`}
+			class={`${activeFeature == data.id ? 'flex justify-center items-center gap-2 px-6 py-1 rounded-lg border-2 border-black min-w-[120px]' : 'flex items-center gap-2 px-6 py-1 min-w-[120px]'}`}
 		>
 			<img
 				class={`${activeFeature == data.id ? 'w-6 h-6 brightness-50' : 'w-6 h-6'}`}
