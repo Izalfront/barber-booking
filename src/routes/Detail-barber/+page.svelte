@@ -20,6 +20,10 @@
 	function goToHome() {
 		window.location.href = './home';
 	}
+
+	function goToAppointment() {
+		window.location.href = './appointment';
+	}
 </script>
 
 <div class="w-full max-w-[450px] mx-auto text-base overflow-x-hidden h-screen">
@@ -119,6 +123,7 @@
 		{/if}
 		<div>
 			<button
+				on:click={goToAppointment}
 				class="w-full h-14 rounded-xl text-white font-semibold bg-[#363062] mt-4 tracking-wide"
 				>Booking Now</button
 			>

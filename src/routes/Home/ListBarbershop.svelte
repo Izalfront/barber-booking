@@ -4,36 +4,42 @@
 	import barber3 from './img/barber3.png';
 	let listBarber = [
 		{
+			id: 1,
 			title: 'Alana Barbershop - Haircut massage & Spa',
 			pinned: 'Banguntapan (5 km)',
 			rating: '4.5',
 			img: barber
 		},
 		{
+			id: 2,
 			title: `Hercha Barbershop - Haircut & Styling`,
 			pinned: 'Jalan Kaliurang (8 km)',
 			rating: '4.5',
 			img: barber2
 		},
 		{
+			id: 3,
 			title: 'Alana Barbershop - Haircut massage & Spa',
 			pinned: 'Banguntapan (5 km)',
 			rating: '4.5',
 			img: barber3
 		},
 		{
+			id: 4,
 			title: 'Alana Barbershop - Haircut massage & Spa',
 			pinned: 'Banguntapan (5 km)',
 			rating: '4.5',
 			img: barber
 		},
 		{
+			id: 5,
 			title: `Hercha Barbershop - Haircut & Styling`,
 			pinned: 'Jalan Kaliurang (8 km)',
 			rating: '4.5',
 			img: barber2
 		},
 		{
+			id: 6,
 			title: 'Alana Barbershop - Haircut massage & Spa',
 			pinned: 'Banguntapan (5 km)',
 			rating: '4.5',
