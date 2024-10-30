@@ -45,30 +45,31 @@
 	];
 </script>
 
-<div class="p-6">
-	<h1 class="text-xl font-semibold text-black">Our Service</h1>
-	<div class="mt-6">
+<div>
+	<h1 class="text-xl font-semibold">Our Service</h1>
+
+	<div class="space-y-6 mt-6">
 		{#each review as data}
 			<!-- svelte-ignore a11y_click_events_have_key_events -->
 			<!-- svelte-ignore a11y_no_static_element_interactions -->
 			<div
-				class="flex justify-between items-center"
-				onclick={() => {
+				class="group cursor-pointer"
+				on:click={() => {
 					data.id;
 				}}
 			>
-				<div class="flex gap-2 mb-6">
-					<div class="text-start">
-						<img class="size-14" src={data.img} alt="" />
+				<div class="flex items-start gap-4">
+					<div class="flex-shrink-0">
+						<img class="size-14 rounded-lg object-cover" src={data.img} alt={data.title} />
 					</div>
-					<div class="text-start">
-						<h1 class="text-lg font-semibold">{data.title}</h1>
-						<div class="flex items-center gap-x-2">
-							<div class="flex">
+
+					<div class="flex-1 min-w-0">
+						<h2 class="text-lg font-semibold truncate">{data.title}</h2>
+						<div class="flex items-center gap-2 my-1">
+							<div class="flex gap-0.5">
 								{#each StarRating({ rating: data.rating }) as isFilled}
 									<svg
-										width="15"
-										height="14"
+										class="w-[15px] h-[14px]"
 										viewBox="0 0 15 14"
 										fill="none"
 										xmlns="http://www.w3.org/2000/svg"
@@ -80,19 +81,13 @@
 									</svg>
 								{/each}
 							</div>
-							<p class="text-black">
-								( {data.rating} )
-							</p>
+							<span class="text-black">( {data.rating} )</span>
 						</div>
-						<p class="text-slate-500">{data.testimonial}</p>
+
+						<p class="text-slate-500 text-sm line-clamp-2">{data.testimonial}</p>
 					</div>
 				</div>
 			</div>
 		{/each}
-	</div>
-	<div>
-		<button class="w-full h-14 rounded-xl text-white font-semibold bg-[#363062] mt-4 tracking-wide"
-			>Booking Now</button
-		>
 	</div>
 </div>

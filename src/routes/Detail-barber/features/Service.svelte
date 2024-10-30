@@ -44,7 +44,7 @@
 	];
 </script>
 
-<div class="p-6">
+<div>
 	<h1 class="text-xl font-semibold text-black">Our Service</h1>
 	<div class="mt-6">
 		{#each service as data}
@@ -70,10 +70,5 @@
 				</div>
 			</div>
 		{/each}
-	</div>
-	<div>
-		<button class="w-full h-14 rounded-xl text-white font-semibold bg-[#363062] mt-4 tracking-wide"
-			>Booking Now</button
-		>
 	</div>
 </div>

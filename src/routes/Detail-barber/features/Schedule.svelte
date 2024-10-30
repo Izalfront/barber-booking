@@ -54,7 +54,7 @@
 	});
 </script>
 
-<div class="p-4 max-w-md mx-auto">
+<div class="max-w-md mx-auto">
 	<!-- Date Header -->
 	<div class="flex items-center gap-2 mb-6">
 		<svg
@@ -112,10 +112,5 @@
 				{/if}
 			</div>
 		{/each}
-	</div>
-	<div>
-		<button class="w-full h-14 rounded-xl text-white font-semibold bg-[#363062] mt-4 tracking-wide"
-			>Booking Now</button
-		>
 	</div>
 </div>

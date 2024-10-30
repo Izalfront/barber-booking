@@ -18,10 +18,34 @@
 	function handleFeatureChange(event: CustomEvent) {
 		activeFeature = event.detail;
 	}
+
+	function goToHome() {
+		window.location.href = './home';
+	}
 </script>
 
 <div class="w-full max-w-[450px] mx-auto text-base overflow-x-hidden h-screen">
 	<div class="px-6 pt-6">
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+		<h1 on:click={goToHome} class="text-xl font-semibold my-6 flex gap-x-4 items-center">
+			<svg
+				width="18"
+				height="14"
+				viewBox="0 0 18 14"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M17 7H1M1 7L7 1M1 7L7 13"
+					stroke="#111827"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>Find a barber nearby
+		</h1>
+
 		<div class="relative overflow-hidden w-full h-[300px]">
 			<div class="absolute inset-0">
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -87,7 +111,7 @@
 		<ListFeature on:change={handleFeatureChange} />
 	</div>
 
-	<div>
+	<div class="p-6">
 		{#if activeFeature === 'about'}
 			<About />
 		{/if}
@@ -100,5 +124,11 @@
 		{#if activeFeature === 'service'}
 			<Service />
 		{/if}
+		<div>
+			<button
+				class="w-full h-14 rounded-xl text-white font-semibold bg-[#363062] mt-4 tracking-wide"
+				>Booking Now</button
+			>
+		</div>
 	</div>
 </div>
