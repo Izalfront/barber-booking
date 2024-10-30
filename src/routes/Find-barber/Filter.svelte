@@ -6,13 +6,17 @@
 
 	let activeTab = 'basic_haircut';
 	let isFilter = true;
+	let scrollEffect = false;
 
 	function handleTabClick(tabName: string) {
 		activeTab = tabName;
 	}
 
 	function closeClick() {
-		isFilter = false;
+		scrollEffect = true;
+		setTimeout(() => {
+			isFilter = false;
+		}, 300);
 	}
 
 	const filterItems = [
@@ -25,7 +29,11 @@
 </script>
 
 {#if isFilter}
-	<div class="w-full max-w-[500px] mx-auto text-base overflow-x-hidden h-screen">
+	<div
+		class={`w-full max-w-[500px] mx-auto text-base overflow-x-hidden h-screen ${
+			scrollEffect ? 'scroll-down' : ''
+		}`}
+	>
 		<div
 			class="bg-black/20 -z-10 p-12 bottom-[90%] absolute w-full max-w-[500px] mx-auto overflow-x-hidden h-screen"
 		></div>
@@ -49,7 +57,11 @@
 					{#each filterItems as filter}
 						<div>
 							<button
-								class={` ${activeTab === filter.id ? 'text-[#363062] bg-[#EDEFFB] p-1.5 border border-black rounded-lg' : 'text-[#8683A1] p-1.5'}`}
+								class={` ${
+									activeTab === filter.id
+										? 'text-[#363062] bg-[#EDEFFB] p-1.5 border border-black rounded-lg'
+										: 'text-[#8683A1] p-1.5'
+								}`}
 								on:click={() => handleTabClick(filter.id)}
 							>
 								{filter.label}
@@ -61,20 +73,20 @@
 			<div class="px-8">
 				<Rating />
 				<Distance />
-				<button class="bg-[#363062] text-white p-4 rounded-xl w-full font-medium">Apply</button>
+				<button
+					on:click={closeClick}
+					class="bg-[#363062] text-white p-4 rounded-xl w-full font-medium"
+				>
+					Apply
+				</button>
 			</div>
 		</div>
 	</div>
 {/if}
 
 <style>
-	.active {
-		background-color: #edeffb;
-		padding: 2;
-	}
-
-	.active-text {
-		color: #363062;
-		font-weight: 600;
+	.scroll-down {
+		transition: transform 0.3s ease-in-out;
+		transform: translateY(100%);
 	}
 </style>

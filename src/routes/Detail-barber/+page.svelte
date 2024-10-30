@@ -1,7 +1,5 @@
 <script lang="ts">
 	import barber from '../home/img/master.png';
-	import pinned from '../home/img/pinned.svg';
-	import rating from '../home/img/rating.svg';
 	import maps from './img/logos_google-maps.svg';
 	import chat from '../BottomBar/img/chat.svg';
 	import favorite from './img/love.svg';
@@ -52,11 +50,6 @@
 				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 				<img class="object-cover w-full h-full rounded-xl" src={barber} alt="BarberImage" />
 			</div>
-			<button
-				class="absolute top-0 left-[19.5rem] bg-[#27AE60] px-4 py-2.5 rounded-xl text-white font-semibold"
-			>
-				<div class="flex gap-1">Open</div>
-			</button>
 		</div>
 
 		<div class="mt-4">

@@ -30,7 +30,7 @@
 		}
 	];
 
-	let activeFeature = '';
+	let activeFeature = 'about';
 
 	function handleClickFeat(tabName: string) {
 		activeFeature = tabName;
