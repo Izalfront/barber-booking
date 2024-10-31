@@ -4,12 +4,13 @@
 	import Date from './Date.svelte';
 	import Payment from './Payment.svelte';
 	import calendar from './img/calendar-mark.svg';
-
-	function goToDetailBarber() {
-		window.location.href = './detail-barber';
-	}
+	import { goto } from '$app/navigation';
 
 	function goToPayNow() {
+		goto('/appointment/detail-appointment');
+	}
+
+	function goToDetailBarber() {
 		window.location.href = './detail-barber';
 	}
 </script>
