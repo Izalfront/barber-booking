@@ -3,11 +3,18 @@
 	import chat from './img/chat.svg';
 	import booking from './img/booking.svg';
 	import profile from './img/profil.svg';
+	import { goto } from '$app/navigation';
 
 	let activeTab = 'home';
 
 	function handleTabClick(tabName: string) {
 		activeTab = tabName;
+
+		// Navigate to different pages based on the tabName
+		if (tabName === 'home') goto('/');
+		else if (tabName === 'booking') goto('/booking');
+		else if (tabName === 'chat') goto('/chat');
+		else if (tabName === 'profile') goto('/profile');
 	}
 
 	const menuItems = [
