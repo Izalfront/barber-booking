@@ -1,7 +1,15 @@
 <script lang="ts">
+	import AvaibleTime from './AvaibleTime.svelte';
+	import ChoiceService from './ChoiceService.svelte';
 	import Date from './Date.svelte';
+	import Payment from './Payment.svelte';
+	import calendar from './img/calendar-mark.svg';
 
 	function goToDetailBarber() {
+		window.location.href = './detail-barber';
+	}
+
+	function goToPayNow() {
 		window.location.href = './detail-barber';
 	}
 </script>
@@ -29,6 +37,22 @@
 		</h1>
 		<div>
 			<Date />
+		</div>
+		<div>
+			<ChoiceService />
+		</div>
+		<div>
+			<AvaibleTime />
+		</div>
+		<div>
+			<Payment />
+		</div>
+		<div>
+			<button
+				on:click={goToPayNow}
+				class="w-full h-14 rounded-xl text-white font-semibold bg-[#363062] mt-4 tracking-wide flex items-center justify-center gap-2"
+				>Deal booking <img src={calendar} alt="" /></button
+			>
 		</div>
 	</div>
 </div>

@@ -4,12 +4,13 @@
 	import chat from '../BottomBar/img/chat.svg';
 	import favorite from './img/love.svg';
 	import share from './img/share.svg';
-	import ListFeature from './ListFeature.svelte';
+
 	import About from './features/About.svelte';
 
 	import Schedule from './features/Schedule.svelte';
 	import Service from './features/Service.svelte';
 	import Review from './features/Review.svelte';
+	import ListFeature from '$lib/images/ListFeature.svelte';
 
 	let activeFeature = 'about';
 
