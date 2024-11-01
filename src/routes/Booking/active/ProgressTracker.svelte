@@ -35,7 +35,6 @@
 		<div class="relative flex justify-between">
 			{#each steps as step, index}
 				<div class="flex flex-col items-center">
-					<!-- Circle with Icon -->
 					<div
 						class="w-6 h-6 rounded-full border-[4px] flex items-center justify-center transition-all duration-300"
 						class:border-[#363062]={isActive(index)}
