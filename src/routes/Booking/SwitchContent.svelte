@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ActiveBooking from './active/ActiveBooking.svelte';
 	import HistoryBooking from './history/HistoryBooking.svelte';
 
 	let activeTab: string = 'Active booking';
@@ -27,8 +28,7 @@
 
 <div class="bg-white p-4">
 	{#if activeTab === 'Active booking'}
-		<h2 class="text-lg font-medium mb-4">Active Bookings</h2>
-		<!-- Add your active booking content here -->
+		<ActiveBooking />
 	{:else}
 		<HistoryBooking />
 	{/if}

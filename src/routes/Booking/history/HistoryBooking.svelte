@@ -13,19 +13,19 @@
 			img: history1
 		},
 		{
-			title: 'Twinsky Monkey Barber & Men Stuff',
+			title: 'Varcity Barbershop Jogja ex The Varcher',
 			location: 'Jl Taman Siswa (8 km)',
 			rating: '5.0',
 			img: history2
 		},
 		{
-			title: 'Barberman - Haircut styling & massage',
+			title: 'Varcity Barbershop Jogja ex The Varcher',
 			location: 'J-Walk Centre  (17 km)',
 			rating: '4.5',
 			img: history3
 		},
 		{
-			title: 'Alana Barbershop - Haircut massage & Spa ',
+			title: 'Varcity Barbershop Jogja ex The Varcher',
 			location: 'Banguntapan (5 km)',
 			rating: '4.5',
 			img: history4
@@ -35,8 +35,8 @@
 
 <div class="mt-3">
 	{#each historys as data}
-		<div class="flex gap-3 mt-5">
-			<div class="">
+		<div class="flex mt-5">
+			<div class="mr-3">
 				<img class="w-36 h-auto" src={data.img} alt="" />
 			</div>
 			<div class="flex flex-col">
