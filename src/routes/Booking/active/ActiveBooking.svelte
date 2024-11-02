@@ -11,22 +11,67 @@
 	import chat from '../img/chat.svg';
 	import calendar from '../img/calendar-fill.svg';
 	import List from './List.svelte';
+	import timer from '../img/stopwatch.svg';
 
-	let currentStep = 2;
+	let currentStep = 1;
+
+	function goToStepWaiting() {
+		if (currentStep < 4) {
+			currentStep++;
+		}
+	}
+
+	function getStatusText(step: number) {
+		switch (step) {
+			case 1:
+				return { title: 'Time Estimation', time: '- 50 Menit' };
+			case 2:
+				return { title: 'On Process', time: '30 Menit' };
+			case 3:
+				return { title: 'Finished', time: 'Yeay!' };
+			default:
+				return { title: 'Time Estimation', time: '- 50 Menit' };
+		}
+	}
 </script>
 
 <div>
 	<div class="flex justify-between gap-3 mt-3 mx-[1.6rem]">
-		<img class="w-6 h-auto" src={schedule} alt="" />
-		<img class="w-6 h-auto" src={stopwatch} alt="" />
-		<img class="w-6 h-auto" src={cut} alt="" />
-		<img class="w-6 h-auto" src={finished} alt="" />
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+		<img
+			class="w-6 h-auto cursor-pointer"
+			src={schedule}
+			alt=""
+			on:click={() => (currentStep = 1)}
+		/>
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+		<img
+			class="w-6 h-auto cursor-pointer"
+			src={stopwatch}
+			alt=""
+			on:click={() => (currentStep = 2)}
+		/>
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+		<img class="w-6 h-auto cursor-pointer" src={cut} alt="" on:click={() => (currentStep = 3)} />
+		<!-- svelte-ignore a11y_click_events_have_key_events -->
+		<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+		<img
+			class="w-6 h-auto cursor-pointer"
+			src={finished}
+			alt=""
+			on:click={() => (currentStep = 4)}
+		/>
 	</div>
+
 	<div class="mt-6">
 		<ProgressTracker {currentStep} />
 	</div>
+
 	<div class="mt-6">
-		<div class=" bg-white p-4 shadow-lg rounded-xl">
+		<div class="bg-white p-4 shadow-lg rounded-xl">
 			<div class="flex">
 				<img class="w-auto h-24 mr-3" src={master} alt="" />
 				<div>
@@ -34,7 +79,9 @@
 					<p class="text-slate-500 text-sm flex gap-2">
 						<img src={pinned} alt="" /> Jogja Expo Centre (2 km)
 					</p>
-					<p class="text-slate-500 text-sm flex gap-2"><img src={rating} alt="" /> 5.0 (24)</p>
+					<p class="text-slate-500 text-sm flex gap-2">
+						<img src={rating} alt="" /> 5.0 (24)
+					</p>
 				</div>
 			</div>
 			<div class="mt-4 border-t">
@@ -49,13 +96,24 @@
 							<p>Chat</p>
 						</div>
 					</div>
-					<button class="bg-[#363062] rounded-lg font-medium px-6 text-white tracking-wide"
-						>Cancel</button
-					>
+					<button class="bg-[#363062] rounded-lg font-medium px-6 text-white tracking-wide">
+						Cancel
+					</button>
 				</div>
 			</div>
 		</div>
 	</div>
+
+	{#if currentStep <= 3}
+		<div class="flex justify-between bg-[#EDEFFB] p-4 rounded-lg mt-4">
+			<div class="flex items-center gap-2">
+				<img src={timer} alt="timer" />
+				<h1 class="font-semibold text-lg">{getStatusText(currentStep).title}</h1>
+			</div>
+			<h1 class="font-semibold text-lg">{getStatusText(currentStep).time}</h1>
+		</div>
+	{/if}
+
 	<div>
 		<div class="flex gap-2 mt-6">
 			<img src={calendar} alt="" />
@@ -63,6 +121,7 @@
 		</div>
 		<p class="text-slate-500 tracking-wide font-medium">Sun, 15 Jan - 08:00 AM</p>
 	</div>
+
 	<div class="mt-5">
 		<List />
 	</div>
