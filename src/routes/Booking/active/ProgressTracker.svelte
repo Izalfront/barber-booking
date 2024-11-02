@@ -22,9 +22,9 @@
 <div class="w-full max-w-xl mx-auto">
 	<div class="relative">
 		<!-- Progress Line -->
-		<div class="absolute top-[16%] left-0 right-0 h-2 bg-gray-200 rounded-full"></div>
+		<div class="absolute top-[12%] left-0 right-0 h-2 bg-gray-200 rounded-full"></div>
 		<div
-			class="absolute top-[16%] left-0 h-2 bg-[#F99417] transition-all duration-500 rounded-full"
+			class="absolute top-[12%] left-0 h-2 bg-[#F99417] transition-all duration-500 rounded-full"
 			style="width: {progressWidth}"
 		></div>
 
