@@ -14,6 +14,12 @@
 	import timer from '../img/stopwatch.svg';
 	import finishedService from '../img/service-finished.svg';
 	import giftReview from '../img/ratingandreview.svg';
+	import { goto } from '$app/navigation';
+
+	function goToRatingReview() {
+		goto('/booking/active/review');
+	}
+
 	let currentStep = 1;
 
 	function getStatusText(step: number) {
@@ -133,6 +139,7 @@
 			</div>
 			<div class="w-full">
 				<button
+					on:click={goToRatingReview}
 					class="w-full h-14 rounded-xl text-white font-semibold bg-[#363062] mt-4 tracking-wide py-4 flex items-center justify-center gap-x-4 translate-y-36"
 					>Rating & review <img src={giftReview} alt="" /></button
 				>
