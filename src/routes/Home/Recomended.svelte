@@ -1,5 +1,5 @@
 <script lang="ts">
-	import StepIndicator from './child/StepIndicator.svelte';
+	import StepIndicator from '../../lib/images/components/StepIndicator.svelte';
 	import barber from './img/master.png';
 	import ListRecomended from './ListRecomended.svelte';
 	import FindMap from './maps/FindMap.svelte';

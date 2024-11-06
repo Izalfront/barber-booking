@@ -1,7 +1,7 @@
 <script lang="ts">
 	import barber from '../Home/img/master.png';
 	import calendar from '../Home/img/calendar.svg';
-	import StepIndicator from '../home/child/StepIndicator.svelte';
+	import StepIndicator from '../../lib/images/components/StepIndicator.svelte';
 	import ListRecomended from '../home/ListRecomended.svelte';
 	import Explore from '../home/Explore.svelte';
 	import CategoryFilter from '../find-barber/CategoryFilter.svelte';

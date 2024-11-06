@@ -1,6 +1,6 @@
 <script lang="ts">
 	import BarberScreenLoading from '$lib/images/components/BarberScreenLoading.svelte';
-	import StepIndicator from './home/child/StepIndicator.svelte';
+	import StepIndicator from '../lib/images/components/StepIndicator.svelte';
 
 	import onboard1 from './Login/img/onboard1.png';
 	import onboard2 from './Login/img/onboard2.png';
