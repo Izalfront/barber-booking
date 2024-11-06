@@ -97,7 +97,7 @@
 			</div>
 		</div>
 		<div class="flex justify-end mt-3">
-			<StepIndicator totalSteps={5} {currentStep} onStepClick={handleStepChange} />
+			<!-- <StepIndicator totalSteps={5} {currentStep} onStepClick={handleStepChange} /> -->
 		</div>
 		<div class="pt-1">
 			<Explore />
