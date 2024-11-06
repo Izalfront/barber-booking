@@ -1,4 +1,3 @@
-<!-- Directive for handling clicks outside dropdown -->
 <script context="module" lang="ts">
 	export function clickOutside(node: HTMLElement): { destroy: () => void } {
 		const handleClick = (event: MouseEvent) => {
@@ -466,9 +465,5 @@
 	input[type='tel']::-webkit-inner-spin-button {
 		-webkit-appearance: none;
 		margin: 0;
-	}
-
-	input[type='tel'] {
-		-moz-appearance: textfield;
 	}
 </style>

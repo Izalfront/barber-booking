@@ -6,7 +6,7 @@
 
 {#if loading}
 	<div
-		style="position: fixed;inset: 0;background-color: #363062;display: flex;align-items: center;justify-content: center;z-index: 9999;column-gap: 8px;"
+		style="position: fixed;inset: 0;background-color: #363062;display: flex;align-items: center;justify-content: center;z-index: 10;column-gap: 8px;"
 		out:blur={{ duration: 700, delay: 100 }}
 	>
 		<img

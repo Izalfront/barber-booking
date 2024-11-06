@@ -11,10 +11,10 @@
 		activeTab = tabName;
 
 		// Navigate to different pages based on the tabName
-		if (tabName === 'home') goto('/');
+		if (tabName === 'home') goto('/home');
 		else if (tabName === 'booking') goto('/booking');
-		else if (tabName === 'chat') goto('/chat');
-		else if (tabName === 'profile') goto('/profile');
+		else if (tabName === 'chat') goto('/home');
+		else if (tabName === 'profile') goto('/home');
 	}
 
 	const menuItems = [
