@@ -82,7 +82,7 @@
 			</div>
 			<br />
 			<div class="flex items-center justify-center text-center mt-4">
-				<StepIndicator totalSteps={slides.length} {currentStep} onStepClick={handleStepChange} />
+				<!-- <StepIndicator totalSteps={slides.length} {currentStep} onStepClick={handleStepChange} /> -->
 			</div>
 			<div class="text-center mt-4">
 				<button onclick={getStarted} class="bg-[#363062] py-3 text-white w-[40vh] rounded-lg"
