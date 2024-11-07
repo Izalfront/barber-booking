@@ -30,10 +30,13 @@
 				/>
 			</div>
 			<button
-				class="absolute top-[15rem] left-[12rem] bg-[#363062] hover:bg-[#2a234e] px-6 py-3 rounded-xl text-white font-semibold"
-				><div class="flex gap-x-1">
-					Booking Now
-					<img src={calendar} alt="Calendar Icon" />
+				class="absolute inset-[8rem] translate-y-24 left-[12rem] bg-[#363062] hover:bg-[#2a234e] px-6 py-3 rounded-xl text-white font-semibold shrink-0 min-w-[150px] max-w-[250px]"
+			>
+				<div class="absolute -translate-y-3 -translate-x-2">
+					<div class="flex gap-x-1 items-center">
+						Booking Now
+						<img src={calendar} alt="Calendar Icon" />
+					</div>
 				</div>
 			</button>
 		</div>

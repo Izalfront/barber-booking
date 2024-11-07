@@ -28,9 +28,12 @@
 <div class="w-full max-w-[450px] mx-auto text-base h-screen bg-[#363062] overflow-y-auto">
 	<!-- Header - Fixed at top -->
 	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-	<div class="sticky top-0 bg-[#363062] p-6 z-20">
+	<div class="sticky top-0 bg-[#363062] px-6 py-1 z-20">
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
-		<h1 class="text-xl font-semibold my-6 flex gap-x-4 items-center text-white cursor-pointer">
+		<h1
+			on:click={goToDetailBarber}
+			class="text-xl font-semibold my-6 flex gap-x-4 items-center text-white cursor-pointer"
+		>
 			<svg
 				width="18"
 				height="14"

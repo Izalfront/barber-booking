@@ -11,7 +11,7 @@
 	}
 
 	function goToInvoice() {
-		goto('/appointment/detail-appointment');
+		goto('/home');
 	}
 
 	function popUpDownload() {
@@ -22,7 +22,7 @@
 <div class="w-full max-w-[450px] mx-auto text-base h-screen bg-[#363062] overflow-y-hidden">
 	<!-- Header - Fixed at top -->
 	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
-	<div class="sticky top-0 bg-[#363062] p-6 z-20">
+	<div class="sticky top-0 bg-[#363062] px-6 py-2 z-20">
 		<!-- svelte-ignore a11y_click_events_have_key_events -->
 		<h1
 			on:click={goToDetailBarber}
